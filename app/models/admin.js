@@ -30,6 +30,8 @@ Admin.init({
             const salt = bcrypt.genSaltSync(10);
             // 生成加密密码
             const psw = bcrypt.hashSync(val, salt);
+            console.log(psw);
+            
             this.setDataValue("password", psw);
         }
     },
